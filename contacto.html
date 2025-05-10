@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto</title>
+  <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="contacto.css" />
+  <link rel="icon" href="assets/logo2.png" type="image/png">
+</head>
+
+<body>
+  <!-- Navegación -->
+  <header class="navegacion">
+    <nav>
+      <div class="logo">
+        <img src="assets/logo2.png" alt="logo kokin´s hotel" />
+      </div>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li>|</li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li>|</li>
+        <li><a href="Reservas.html">Servicios</a></li>
+        <li>|</li>
+        <li><a href="#">Explorar</a></li>
+        <li>|</li>
+        <li><a href="contacto.html" class="activo">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <span class="big-circle"></span>
+    <img src="img/shape.png" class="square" alt="" />
+    <div class="form">
+      <div class="contact-info">
+        <h3 class="title">¿Tienes alguna consulta? ¡Estamos para ayudarte!</h3>
+        <p class="text">En el Hotel Kokin, ubicado en el corazón de la Selva Central, queremos brindarte la mejor atención posible. Escríbenos para reservas, dudas o recomendaciones. Será un placer atenderte 
+          y hacer que tu experiencia con nosotros sea inolvidable.</p>
+        <div class="info">
+          <div class="information">
+            <img src="assets/location.png" class="icon" alt="" />
+            <p>AV. virgen del carmen</p>
+          </div>
+          <div class="information">
+            <img src="assets/email.png" class="icon" alt="" />
+            <p>hotelkokin´s@gmail.com</p>
+          </div>
+          <div class="information">
+            <img src="assets/phone.png" class="icon" alt="" />
+            <p>930609209</p>
+          </div>
+        </div>
+        <div class="social-media">
+          <p>contactanos por nuestras redes sociales:</p>
+          <div class="social-icons">
+            <a href="#"><img src="assets/facebook.png" alt="Facebook" class="icon-img"></a>
+            <a href="#"><img src="assets/twitter.png"  alt="Twitter"  class="icon-img"></a>
+            <a href="#"><img src="assets/instagram.png" alt="Instagram" class="icon-img"></a>
+            <a href="#"><img src="assets/linkedin.png"  alt="LinkedIn" class="icon-img"></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form">
+        <span class="circle one"></span>
+        <span class="circle two"></span>
+
+        <form action="enviar.php" method="POST" autocomplete="off">
+          <h3 class="title">contactanos</h3>
+        
+          <div class="input-container">
+            <input type="text" name="nombre" class="input" required />
+            <label>nombre</label>
+            <span>nombre</span>
+          </div>
+        
+          <div class="input-container">
+            <input type="email" name="email" class="input" required />
+            <label>email</label>
+            <span>email</span>
+          </div>
+        
+          <div class="input-container">
+            <input type="tel" name="telefono" class="input" required />
+            <label>teléfono</label>
+            <span>teléfono</span>
+          </div>
+        
+          <div class="input-container textarea">
+            <textarea name="mensaje" class="input" required></textarea>
+            <label>mensaje</label>
+            <span>mensaje</span>
+          </div>
+        
+          <input type="submit" value="Enviar" class="btn" />
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="contacto.js"></script>
+
+  <div id="mensaje-gracias" style="display:none; text-align:center; margin-top:20px; color:green; font-weight:bold;">
+    ¡Gracias por contactarnos! Te responderemos pronto.
+  </div>
+  
+  <script>
+    // Mostrar el mensaje si la URL contiene ?enviado=1
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('enviado') === '1') {
+      document.getElementById('mensaje-gracias').style.display = 'block';
+      // Elimina el parámetro de la URL sin recargar la página
+      window.history.replaceState({}, document.title, window.location.pathname);
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Poppins:wght@400;600&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Lora', serif;
+  background: #f3f0f0;
+}
+
+/* Navegación */
+/* GENERAL HEADER STYLES */
+.navegacion {
+  background-color: #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px 40px;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.logo img {
+  height: 100px;
+  object-fit: contain;
+}
+/* MENU */
+.menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 25px;
+}
+
+.menu li {
+  position: relative;
+}
+
+.menu li:not(:last-child)::after {
+  content: "|";
+  margin-left: 20px;
+  color: #999;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #222;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.menu a:hover,
+.menu a.activo {
+  color: #009688; /* Verde agua o turquesa */
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  font-weight: bold;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+}  
+ 
+/* Nosotros */
+.nosotros {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.contenedor-nosotros {
+   display: flex;
+   align-items: stretch;
+   gap: 40px;
+ }
+ 
+ .imagenes {
+   flex: 1;
+   display: flex;
+   align-items: flex-start;
+   justify-content: center;
+ }
+ 
+ .imagenes img {
+   max-width: 100%;
+   height: auto;
+   border-radius: 10px;
+ }
+ 
+ .contenido {
+   flex: 1;
+   display: flex;
+   flex-direction: column;
+ }
+.contenido h3 {
+  font-size: 14px;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+}
+
+.contenido h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.contenido .descripcion {
+  font-size: 17px;
+  color: #444;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.contenido .texto {
+  font-size: 15px;
+  color: #666;
+  margin-bottom: 30px;
+  text-align: justify;
+}
+
+.cajas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.caja {
+  flex: 1;
+  background: white;
+  padding: 20px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  min-width: 200px;
+}
+
+.caja i.icono {
+  font-size: 30px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.caja h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.caja p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Animación */
+.animar {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease;
+}
+
+.animar.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .contenedor-nosotros {
+    flex-direction: column;
+  }
+
+  .cajas {
+    flex-direction: column;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* Animación de entrada */
+@keyframes slideDown {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+nav ul li {
+  animation: slideDown 0.6s ease forwards;
+  opacity: 0;
+}
+
+/* Animación escalonada */
+nav ul li:nth-child(1) { animation-delay: 0.1s; }
+nav ul li:nth-child(2) { animation-delay: 0.2s; }
+nav ul li:nth-child(3) { animation-delay: 0.3s; }
+nav ul li:nth-child(4) { animation-delay: 0.4s; }
+
+/* Transición en hover */
+nav ul li a {
+  transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #000;
+  transform: scale(1.05);
+}

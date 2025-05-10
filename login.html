@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign in & Sign up Form</title>
+    <link rel="stylesheet" href="login.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <header class="navegacion">
+      <nav class="nav-container">
+        <div class="logo">
+          <img src="/assets/logo2.png" alt="Logo" />
+        </div>
+        <div class="menu-toggle" id="menu-btn">
+          <i class="fas fa-bars"></i>
+        </div>
+        <ul class="menu" id="nav-links">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="Reservas.html">Servicios</a></li>
+          <li><a href="explorar.html">Explorar</a></li>
+          <li><a href="contacto.html" class="activo">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="box">
+        <div class="inner-box">
+          <div class="forms-wrap">
+            <!-- Formulario de Ingreso -->
+            <form action="#" autocomplete="off" class="sign-in-form">
+              <div class="logo">
+                <img src="assets/logo2.png" alt="easyclass" />
+                <h4>Hotel kokin´s</h4>
+              </div>
+
+              <div class="heading">
+                <h2>Bienvenido</h2>
+                <h6>No estás registrado?</h6>
+                <a href="#" class="toggle">Regístrate</a>
+              </div>
+
+              <div class="actual-form">
+                <div class="input-wrap">
+                  <input
+                    type="text"
+                    id="login-name"
+                    minlength="4"
+                    class="input-field"
+                    autocomplete="off"
+                    required
+                  />
+                  <label for="login-name">Nombre</label>
+                </div>
+
+                <div class="input-wrap">
+                  <input
+                    type="password"
+                    id="login-password"
+                    minlength="4"
+                    class="input-field"
+                    autocomplete="off"
+                    required
+                  />
+                  <label for="login-password">Contraseña</label>
+                </div>
+
+                <input type="submit" value="Iniciar sesión" class="sign-btn" />
+
+                <p class="text">
+                  ¿Has olvidado tu contraseña o tus datos de inicio de sesión?
+                  <a href="#">Obtén ayuda</a> para iniciar sesión.
+                </p>
+              </div>
+            </form>
+
+            <!-- Formulario de Registro -->
+            <form action="#" autocomplete="off" class="sign-up-form">
+              <div class="logo">
+                <img src="assets/logo2.png" alt="easyclass" />
+                <h4>Hotel kokin´s</h4>
+              </div>
+
+              <div class="heading">
+                <h2>Comencemos</h2>
+                <h6>¿Ya tienes una cuenta?</h6>
+                <a href="#" class="toggle">Inicia sesión</a>
+              </div>
+
+              <div class="actual-form">
+                <div class="input-wrap">
+                  <input
+                    type="text"
+                    id="register-name"
+                    minlength="4"
+                    class="input-field"
+                    autocomplete="off"
+                    required
+                  />
+                  <label for="register-name">Nombre</label>
+                </div>
+
+                <div class="input-wrap">
+                  <input
+                    type="email"
+                    id="register-email"
+                    class="input-field"
+                    autocomplete="off"
+                    required
+                  />
+                  <label for="register-email">Email</label>
+                </div>
+
+                <div class="input-wrap">
+                  <input
+                    type="password"
+                    id="register-password"
+                    minlength="4"
+                    class="input-field"
+                    autocomplete="off"
+                    required
+                  />
+                  <label for="register-password">Contraseña</label>
+                </div>
+
+                <input type="submit" value="Únete" class="sign-btn" />
+
+                <p class="text">
+                  Al registrarme, acepto los
+                  <a href="#">Términos de servicio</a> y la
+                  <a href="#">política de privacidad</a>
+                </p>
+              </div>
+            </form>
+          </div>
+
+          <div class="carousel">
+            <div class="images-wrapper">
+              <img src="assets/logo2.png" class="image img-1 show" alt="" />
+              <img src="assets/logo2.png" class="image img-2" alt="" />
+              <img src="assets/logo2.png" class="image img-3" alt="" />
+            </div>
+
+            <div class="text-slider">
+              <div class="text-wrap">
+                <div class="text-group">
+                  <h2>Crea tus propios cursos</h2>
+                  <h2>Personaliza como quieras</h2>
+                  <h2>Invita estudiantes a tu clase</h2>
+                </div>
+              </div>
+
+              <div class="bullets">
+                <span class="active" data-value="1"></span>
+                <span data-value="2"></span>
+                <span data-value="3"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- JavaScript file -->
+    <script src="script.js"></script>
+  </body>
+</html>
